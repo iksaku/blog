@@ -16,9 +16,7 @@ module.exports = {
         plugins: [
             tailwind('tailwind.config.js'),
             autoprefixer,
-            ...process.env.NODE_ENV === 'production'
-                ? [purgecss]
-                : []
+            purgecss
         ]
     }
 };
