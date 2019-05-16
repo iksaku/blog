@@ -1,0 +1,24 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "Static Generated Blog",
+  "main": "index.js",
+  "author": "Jorge González",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "yarn run development",
+    "development": "cross-env NODE_ENV=development node_modules/.bin/vuepress dev",
+    "prod": "yarn run production",
+    "production": "cross-env NODE_ENV=development node_modules/.bin/vuepress build"
+  },
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^1.2.0",
+    "autoprefixer": "^9.5.1",
+    "cross-env": "^5.2.0",
+    "dayjs": "^1.8.14",
+    "postcss-import": "^12.0.1",
+    "tailwindcss": "^1.0.0",
+    "vuepress": "^0.14.11"
+  }
+}
