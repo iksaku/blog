@@ -41,6 +41,8 @@
     export default {
         name: "NavBar",
 
+        /* TODO: Toggle Sidebar */
+
         data() {
             return {
                 links: [
