@@ -1,8 +1,8 @@
 <template>
     <div class="md:max-w-2xl">
-        <div class="font-sans">
+        <div class="font-sans border-b border-gray-300 pb-2">
             <!-- Header -->
-            <h1 class="font-extrabold text-3xl md:text-4xl">
+            <h1 class="font-extrabold text-3xl md:text-4xl pb-2">
                 {{ $page.title }}
             </h1>
             <Date :timestamp="publishDate" v-if="publishDate">
@@ -12,7 +12,7 @@
                 Updated on
             </Date>
         </div>
-        <article class="pt-4 leading-relaxed">
+        <article class="leading-relaxed">
             <Content></Content>
         </article>
     </div>
@@ -39,7 +39,7 @@
                 return this.$page.frontmatter.published
             },
             updateDate() {
-                return this.lastUpdated
+                return this.$page.lastUpdated
             },
         },
 
@@ -54,7 +54,7 @@
 </script>
 
 <style scoped>
-    >>> p {
+    >>> p:not(.date) {
         @apply .my-4;
     }
 </style>

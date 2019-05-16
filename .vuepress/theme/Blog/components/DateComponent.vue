@@ -1,7 +1,10 @@
 <template>
-    <time :datetime="isoDate" class="text-sm italic text-sm text-gray-700">
-        <slot /> {{ parsedDate }}
-    </time>
+    <p class="text-sm italic text-sm text-gray-700 date">
+        <slot />
+        <time :datetime="isoDate">
+            {{ parsedDate }}
+        </time>
+    </p>
 </template>
 
 <script>
