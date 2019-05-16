@@ -1,18 +1,14 @@
 <template>
-    <div class="md:max-w-2xl">
-        <div class="font-sans border-b border-gray-300 pb-2">
+    <div class="md:max-w-3xl">
+        <div class="border-b border-gray-300 pb-2">
             <!-- Header -->
-            <h1 class="font-extrabold text-3xl md:text-4xl pb-2">
+            <h1 class="font-extrabold text-xl md:text-5xl pb-2">
                 {{ $page.title }}
             </h1>
-            <Date :timestamp="publishDate" v-if="publishDate">
-                Published on
-            </Date>
-            <Date :timestamp="updateDate" v-if="updateDate">
-                Updated on
-            </Date>
+
+            <Date :timestamp="publishDate" />
         </div>
-        <article class="leading-relaxed">
+        <article class="leading-relaxed text-xl">
             <Content></Content>
         </article>
     </div>
@@ -37,10 +33,7 @@
         computed: {
             publishDate() {
                 return this.$page.frontmatter.published
-            },
-            updateDate() {
-                return this.$page.lastUpdated
-            },
+            }
         },
 
         mounted() {

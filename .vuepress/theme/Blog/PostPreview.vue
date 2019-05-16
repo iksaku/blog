@@ -1,6 +1,6 @@
 <template>
     <div
-        class="border border-gray-400 rounded max-h-40 flex flex-col sm:flex-row group hover:bg-gray-100 hover:cursor-pointer shadow-md font-sans"
+        class="border border-gray-400 rounded max-h-40 flex flex-col sm:flex-row group hover:bg-gray-100 hover:cursor-pointer shadow-md"
         @click="$router.push(path)"
     >
         <div v-if="image" class="flex-grow sm:w-1/5 text-center">
@@ -13,7 +13,7 @@
                 </h1>
             </router-link>
             <Date :timestamp="publishDate" v-if="publishDate">
-                Published on
+                🕔🕔🕔🕔Published
             </Date>
             <p v-if="excerpt">
                 <span v-html="adjustedExcerpt"></span>
