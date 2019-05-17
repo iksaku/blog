@@ -1,13 +1,13 @@
 <template>
     <div
-        class="border border-gray-400 rounded max-h-40 flex flex-col sm:flex-row group hover:bg-gray-100 hover:cursor-pointer shadow-md"
+        class="bg-gray-100 border border-gray-400 rounded h-40 sm:h-auto flex flex-col sm:flex-row group hover:bg-white hover:cursor-pointer shadow-md"
         @click="$router.push(path)"
     >
-        <div v-if="image" class="flex-grow sm:w-1/5 text-center">
-            <img :src="image.src" :alt="image.description">
+        <div v-if="frontmatter.image" class="sm:w-1/6 overflow-hidden rounded rounded-b-none sm:rounded-l sm:rounded-r-none">
+            <ImageComponent :src="frontmatter.image.src" :alt="frontmatter.image.description" class="" />
         </div>
         <div class="flex-grow p-3">
-            <router-link :to="path">
+            <router-link :to="path" class="outline-none">
                 <h1 class="font-bold text-xl group-hover:text-blue-700">
                     {{ title }}
                 </h1>
@@ -17,8 +17,8 @@
             </Date>
             <p v-if="excerpt">
                 <span v-html="adjustedExcerpt"></span>
-                <router-link :to="path" class="group-hover:text-blue-700">
-                    More
+                <router-link :to="path" class="font-bold group-hover:text-blue-700 outline-none">
+                    Continue Reading
                 </router-link>
             </p>
         </div>
@@ -27,20 +27,20 @@
 
 <script>
     import Date from './components/DateComponent'
+    import ImageComponent from '../components/ImageComponent'
 
     export default {
         name: "PostPreview",
 
-        components: {Date},
+        components: {
+            Date,
+            ImageComponent
+        },
 
         props: {
             path: String,
             title: String,
             excerpt: String,
-            image: {
-                type: Object,
-                required: false
-            },
             lastUpdated: {
                 type: Number,
                 required: false

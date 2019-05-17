@@ -1,5 +1,5 @@
 <template>
-    <div class="md:max-w-4xl p-4">
+    <div class="bg-gray-100 border border-gray-400 rounded md:max-w-4xl p-4">
         <h1 class="font-bold text-3xl text-center font-serif italic">
             {{ randomIntroductoryPhrase }}
         </h1>
@@ -7,7 +7,7 @@
         <ImageComponent
                 src="/img/profile_picture.jpg"
                 alt="Jorge's Profile Picture"
-                class="rounded-full w-1/5 h-1/5 mx-auto my-6"
+                class="rounded-full w-2/3 h-2/3 sm:w-1/3 sm:w-1/3 md:w-1/5 md:h-1/5 mx-auto my-6"
         />
 
         <div class="text-xl text-content">

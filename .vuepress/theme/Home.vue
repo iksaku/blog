@@ -33,7 +33,10 @@
         computed: {
             posts() {
                 return this.$site.pages
-                    .filter(page => page.path.match(/^\/posts\//g) !== null && page.frontmatter.published)
+                    .filter(page =>
+                        page.path.match(/^\/posts\//g) !== null
+                        && (page.frontmatter.published || process.env.NODE_ENV !== 'production')
+                    )
                     .sort((postA, postB) => {
                         let dateA = dayjs(postA.frontmatter.published)
                         let dateB = dayjs(postB.frontmatter.published)

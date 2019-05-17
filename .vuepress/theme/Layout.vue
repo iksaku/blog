@@ -36,8 +36,24 @@
     @import 'styles/theme.styl';
 </style>
 
-<style>
-    .text-content p {
-        @apply .my-4 .font-serif .text-justify;
+<style lang="postcss">
+    body {
+        @apply .bg-gray-200;
+    }
+
+    .content {
+        @apply .leading-relaxed .text-xl;
+
+        p {
+            @apply .my-4 .font-serif .text-justify;
+        }
+
+        a {
+            @apply .text-blue-700;
+
+            &:hover {
+                @apply .text-blue-900;
+            }
+        }
     }
 </style>

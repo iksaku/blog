@@ -1,14 +1,16 @@
 <template>
-    <div class="md:max-w-4xl p-4">
+    <div class="bg-gray-100 border border-gray-400 rounded shadow md:max-w-4xl p-4">
         <div class="border-b border-gray-300 pb-2">
+
+
             <!-- Header -->
-            <h1 class="font-extrabold text-xl sm:text-2xl md:text-4xl pb-2 font-serif">
+            <h1 class="font-extrabold text-3xl sm:text-3xl md:text-4xl pb-2 font-serif">
                 {{ $page.title }}
             </h1>
 
             <Date :timestamp="publishDate" />
         </div>
-        <article class="leading-relaxed text-xl text-content">
+        <article>
             <Content></Content>
         </article>
     </div>
