@@ -1,14 +1,14 @@
 <template>
-    <div class="md:max-w-3xl">
+    <div class="md:max-w-4xl p-4">
         <div class="border-b border-gray-300 pb-2">
             <!-- Header -->
-            <h1 class="font-extrabold text-xl md:text-5xl pb-2">
+            <h1 class="font-extrabold text-xl sm:text-2xl md:text-4xl pb-2 font-serif">
                 {{ $page.title }}
             </h1>
 
             <Date :timestamp="publishDate" />
         </div>
-        <article class="leading-relaxed text-xl">
+        <article class="leading-relaxed text-xl text-content">
             <Content></Content>
         </article>
     </div>
@@ -19,35 +19,15 @@
 
     export default {
         name: "Post",
-        components: {Date},
 
-        methods: {
-            updateScrollProgress() {
-                let bar = document.querySelector('#progress')
-                let scroll = document.body.scrollTop || document.documentElement.scrollTop
-                let height = document.documentElement.scrollHeight - document.documentElement.clientHeight
-                bar.style.width = (scroll / height * 100) + '%;'
-            }
+        components: {
+            Date
         },
 
         computed: {
             publishDate() {
                 return this.$page.frontmatter.published
             }
-        },
-
-        mounted() {
-            window.addEventListener('scroll', this.updateScrollProgress)
-        },
-
-        beforeDestroy() {
-            window.removeEventListener('scroll', this.updateScrollProgress)
-        },
+        }
     }
 </script>
-
-<style scoped>
-    >>> p:not(.date) {
-        @apply .my-4;
-    }
-</style>

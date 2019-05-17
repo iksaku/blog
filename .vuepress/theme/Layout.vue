@@ -1,10 +1,9 @@
 <template>
-    <div class="w-full h-screen bg-grey-lightest leading-normal tracking-normal text-gray-900">
-        <div id="progress" class="fixed h-2 z-20 pin-t bg-indigo-400"></div>
+    <div class="w-full h-full min-h-screen text-gray-900 pt-16">
+        <NavBar />
 
-        <div class="h-full p-4 sm:px-16">
-            <NavBar />
-            <component :is="layout" class="h-full container pt-5 w-full mx-auto"></component>
+        <div class="p-4 sm:px-16">
+            <component :is="layout" class="h-full container mx-auto"></component>
         </div>
     </div>
 </template>
@@ -17,6 +16,7 @@
 
     export default {
         name: 'Layout',
+
         components: {
             About,
             BlogPost,
@@ -28,10 +28,16 @@
             layout() {
                 return this.$page.frontmatter.layout || 'BlogPost'
             }
-        },
+        }
     }
 </script>
 
 <style lang="stylus">
-    @import './styles/theme.styl';
+    @import 'styles/theme.styl';
+</style>
+
+<style>
+    .text-content p {
+        @apply .my-4 .font-serif .text-justify;
+    }
 </style>

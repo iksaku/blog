@@ -30,7 +30,9 @@
 
     export default {
         name: "PostPreview",
+
         components: {Date},
+
         props: {
             path: String,
             title: String,
