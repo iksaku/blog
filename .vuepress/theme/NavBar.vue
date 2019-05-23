@@ -1,5 +1,5 @@
 <template>
-    <nav class="w-full bg-gray-200 z-10 fixed top-0 p-4 sm:px-16 border-b border-gray-400">
+    <nav class="w-full bg-gray-200 z-10 fixed top-0 inset-x-0 p-4 sm:px-16 border-b border-gray-400">
         <div class="w-full sm:max-w-xl mx-auto flex flex-wrap items-center justify-between mt-0">
             <router-link tag="a"
                          class="text-xl font-bold no-underline hover:text-gray-700 outline-none"
