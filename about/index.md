@@ -2,7 +2,7 @@
 layout: About
 ---
 
-My name is **Jorge González** (aka iksaku).
+My name is **Jorge González** (aka _iksaku_).
 
 I'm a Self-taught software developer who likes to code :computer:,
 explore new technologies :iphone:, research some CS theory :bulb:,

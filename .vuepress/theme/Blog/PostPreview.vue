@@ -1,6 +1,6 @@
 <template>
     <div
-        class="bg-gray-100 border border-gray-400 rounded h-40 sm:h-auto flex flex-col sm:flex-row group hover:bg-white hover:cursor-pointer shadow-md"
+        class="bg-gray-100 border border-gray-400 rounded h-32 flex flex-col sm:flex-row group hover:bg-white hover:cursor-pointer shadow-md"
         @click="$router.push(path)"
     >
         <div v-if="frontmatter.image" class="sm:w-1/6 overflow-hidden rounded rounded-b-none sm:rounded-l sm:rounded-r-none">
@@ -53,7 +53,7 @@
                 return this.frontmatter.published
             },
             adjustedExcerpt() {
-                return this.excerpt.replace(/^<p>(.*)\.+<\/p>\n$/g, "$1...")
+                return this.excerpt.replace(/^<p>([\s\S]+)\.+<\/p>\n$/g, "$1...")
             }
         }
     }

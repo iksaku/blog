@@ -1,5 +1,5 @@
 module.exports = {
-    title: "iksaku's Blog",
+    title: "Jorge's Blog",
     description: "A personal blog full of... Well, personal content.",
     themeConfig: {
         lastUpdated: true
