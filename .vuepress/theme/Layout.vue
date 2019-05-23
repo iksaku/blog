@@ -72,7 +72,7 @@
             @apply .text-transparent;
 
             &:hover {
-                @apply .text-blue-900;
+                @apply .text-blue-700;
             }
         }
     }
