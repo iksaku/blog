@@ -7,10 +7,15 @@ cache: yarn
 
 jobs:
   include:
+    # Install Dependencies
     - stage: precache
       script: true
+
+    # Run Tests
     - stage: test
       script: yarn lint
+
+    # Deploy Application
     - stage: deploy
       before_script: yarn global add netlify-cli
       script: yarn build
