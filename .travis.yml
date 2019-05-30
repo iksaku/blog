@@ -22,6 +22,6 @@ jobs:
       deploy:
         provider: script
         skip_cleanup: true
-        script: netlify deploy --site=$NETLIFY_SITE_ID --auth=$NETLIFY_ACCESS_TOKEN --dir=.vuepress/dist
+        script: netlify deploy --site=$NETLIFY_SITE_ID --auth=$NETLIFY_ACCESS_TOKEN --dir=.vuepress/dist --prod
         on:
           branch: master
