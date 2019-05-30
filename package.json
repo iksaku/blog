@@ -7,20 +7,21 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "dev": "yarn run development",
-    "development": "cross-env NODE_ENV=development node_modules/.bin/vuepress dev",
-    "prod": "yarn run production",
-    "production": "cross-env NODE_ENV=development node_modules/.bin/vuepress build"
+    "dev": "cross-env NODE_ENV=development node_modules/.bin/vuepress dev",
+    "build": "cross-env NODE_ENV=development node_modules/.bin/vuepress build",
+    "lint": "cross-env eslint \".vuepress/theme/**/*.{js,vue}\""
   },
   "devDependencies": {
-    "@fullhuman/postcss-purgecss": "^1.2.0",
-    "autoprefixer": "^9.5.1",
-    "cross-env": "^5.2.0",
-    "dayjs": "^1.8.14",
-    "markdown-it-emoji": "^1.4.0",
-    "postcss-import": "^12.0.1",
-    "postcss-nested": "^4.1.2",
-    "tailwindcss": "^1.0.0",
-    "vuepress": "^0.14.11"
+    "@fullhuman/postcss-purgecss": "^1.2",
+    "autoprefixer": "^9.5",
+    "cross-env": "^5.2",
+    "dayjs": "^1.8",
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.2.2",
+    "markdown-it-emoji": "^1.4",
+    "postcss-import": "^12.0",
+    "postcss-nested": "^4.1",
+    "tailwindcss": "^1.0",
+    "vuepress": "^0.14"
   }
 }

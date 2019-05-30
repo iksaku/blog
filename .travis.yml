@@ -1,0 +1,22 @@
+sudo: false
+
+language: node_js
+node_js: '8'
+
+cache: yarn
+
+jobs:
+  include:
+    - stage: precache
+      script: true
+    - stage: test
+      script: yarn lint
+    - stage: deploy
+      before_script: yarn global add netlify-cli
+      script: yarn build
+      deploy:
+        provider: script
+        skip_cleanup: true
+        script: netlify deploy --site=$NETLIFY_SITE_ID --auth=$NETLIFY_ACCESS_TOKEN --dir=.vuepress/dist
+        on:
+          branch: master
