@@ -16,12 +16,12 @@
     "autoprefixer": "^9.5",
     "cross-env": "^5.2",
     "dayjs": "^1.8",
-    "eslint": "^5.16.0",
-    "eslint-plugin-vue": "^5.2.2",
+    "eslint": "^5.16",
+    "eslint-plugin-vue": "^5.2",
     "markdown-it-emoji": "^1.4",
     "postcss-import": "^12.0",
     "postcss-nested": "^4.1",
     "tailwindcss": "^1.0",
-    "vuepress": "^0.14"
+    "vuepress": "^1.0.1"
   }
 }
